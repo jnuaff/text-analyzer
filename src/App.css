@@ -4,14 +4,20 @@
   background-color: #f0f2f5;
 }
 
-h3{
-  color: black;
+.home{
+  min-height: 100vh;
 }
 
-.container{
+.user-input{
   margin-left: auto;
   margin-right: auto;
   width: 70%;
+}
+
+@media (max-width: 768px) {
+  .user-input{
+    width: 90%;
+  }
 }
 
 .navbar {
@@ -27,17 +33,26 @@ h3{
   margin-left: 15px;
 }
 
+.navbar__title{
+  font-size: 1.17em;
+}
+
 .user-input__info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #fff;
   border: 1px solid #f7f7f7;
   padding: 20px;
   color: #9e9e9e;
   font-size: 18px;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .user-input__info {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .user-input__input {
@@ -47,6 +62,8 @@ h3{
   font-size: 23px;
   padding: 0;
   margin: 0;
+  background-color: #fff;
+  color: black;
 }
 
 p{
@@ -54,32 +71,32 @@ p{
   color: black;
 }
 
-.data {
-  display: flex;
-  list-style-type: none;
-  justify-content: space-around;
+.user-input__data {
+  display: block;
+  width: 100%;
   color: #9e9e9e;
   font-size: 16px;
   font-weight: 600;
   background-color: #fff;
   border: 1px solid #f7f7f7;
-  padding: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
-.progress-container{
+.progress-bar__container{
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: normal;
-  height: 98px;
   background: #e6e9ff;
   border-radius: 20px;
   box-shadow: 0px 10px 50px #abb7e9;
 }
 
-.progress-bar{
+.progress-bar__info{
+  z-index: 1;
   height: 20px;
   width: 0;
   background: #1da1f2;
@@ -90,4 +107,11 @@ p{
 
 span{
   color: black;
+}
+
+.progress-bar__span{
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 2;
 }
