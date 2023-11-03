@@ -4,11 +4,9 @@ import "./App.css";
 const Navbar = () => {
   return (
     <>
-      <ul className="navbar">
-        <li>
-          <h3 className="navbar__title">Text Analizer</h3>
-        </li>
-      </ul>
+      <header className="navbar">
+          <h1 className="navbar__title">Text Analizer</h1>
+      </header>
     </>
   );
 };
